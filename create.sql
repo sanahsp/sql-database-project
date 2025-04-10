@@ -7,7 +7,7 @@ CHECK (
 CREATE TABLE Employee (
   ESSN SSN_TYPE NOT NULL DEFAULT '000-000-0000',
   Salary INT DEFAULT NULL,
-  NAME VARCHAR(255) DEFAULT NULL,
+  Name VARCHAR(255) DEFAULT NULL,
   PRIMARY KEY (ESSN)
 );
 
@@ -16,7 +16,7 @@ CREATE TABLE Apartment_Complex (
   Complex_Number INT NOT NULL DEFAULT 000,
   Street VARCHAR(155) DEFAULT NULL,
   City VARCHAR(100) DEFAULT NULL,
-  State VARCHAR(50) DEFAULT NULL,
+  L_State VARCHAR(50) DEFAULT NULL, -- i changed this to L_State because state is a keyword
   PRIMARY KEY (Complex_Number),
   FOREIGN KEY (Manager) REFERENCES Employee(ESSN) 
   ON DELETE SET DEFAULT 
@@ -47,7 +47,7 @@ CREATE TABLE Renters (
 -- Lease Table
 CREATE TABLE Lease (
   Contract_ID INT NOT NULL DEFAULT 0000000,
-  Payment_Amount INT DEFAULT 0,
+  Payment_Amount DECIMAL(10,2) DEFAULT 0, -- changed to decimal because its a price
   Type INT DEFAULT NULL,
   PRIMARY KEY (Contract_ID)
 );
@@ -58,12 +58,18 @@ CREATE TABLE Contractors (
   PRIMARY KEY (Company_Name)
 );
 
+-- Work Order Table
+CREATE TABLE Work_Order (
+  Project_ID INT NOT NULL DEFAULT 00000,
+  Type VARCHAR(255) DEFAULT NULL,
+  PRIMARY KEY (ProjectID)
+);
 -- Commissions Table
 CREATE TABLE Commissions (
   Complex_Number INT NOT NULL DEFAULT 000,
   Company_Name VARCHAR(255) NOT NULL DEFAULT 'Not Provided',
   Project_ID INT NOT NULL DEFAULT 00000,
-  Budget INT DEFAULT 0,
+  Budget DECIMAL(10,2) DEFAULT 0, -- changed to decimal because its a price
   Num_Hrs INT DEFAULT 0,
   FOREIGN KEY (Complex_Number) REFERENCES Apartment_Complex(Complex_Number) ON DELETE SET DEFAULT,
   FOREIGN KEY (Company_Name) REFERENCES Contractors(Company_Name) ON DELETE SET DEFAULT,
@@ -71,7 +77,13 @@ CREATE TABLE Commissions (
 );
 
 -- Development Projects Table 
-
+CREATE TABLE Development_Projects (
+  Project_ID INT NOT NULL DEFAULT 00000,
+  Complex_Number INT NOT NULL DEFAULT 000,
+  Budget DECIMAL(10,2) DEFAULT 0, -- changed to decimal because its a price
+  FOREIGN KEY (Project_ID) REFERENCES Work_Order(Project_ID) ON DELETE SET DEFAULT,
+  FOREIGN KEY (Complex_Number) REFERENCES Apartment_Complex(Complex_Number) ON DELETE SET DEFAULT,
+);
 -- Employees working at Apartment Complex Tavle 
 
 -- Renters signing Leases Table 
