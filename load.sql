@@ -124,15 +124,6 @@ LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (RSSN, Project_ID, Complex_Number);
 
--- Renter_Report_Issue
-LOAD DATA LOCAL INFILE 'sql-database-project/Renter_Report_Issue.csv'
-INTO TABLE Renter_Report_Issue
-FIELDS TERMINATED BY ','
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 LINES
-(RSSN, Project_ID, Complex_Number);
-
 -- Property_Issues
 LOAD DATA LOCAL INFILE 'sql-database-project/Property_Issues.csv'
 INTO TABLE Property_Issues
