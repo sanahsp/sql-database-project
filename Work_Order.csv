@@ -1,0 +1,101 @@
+Project_ID,Type,Complex_Number
+1,Inspection,141
+2,Replacement,226
+3,Repair,172
+4,Emergency Repair,231
+5,Upgrade,242
+6,Replacement,121
+7,Replacement,211
+8,Emergency Repair,282
+9,Upgrade,197
+10,Upgrade,146
+11,Repair,236
+12,Maintenance,134
+13,Repair,259
+14,Installation,269
+15,Upgrade,292
+16,Installation,121
+17,Emergency Repair,138
+18,Scheduled Service,275
+19,Repair,215
+20,Emergency Repair,162
+21,Emergency Repair,268
+22,Consultation,259
+23,Replacement,156
+24,Consultation,199
+25,Calibration,105
+26,Replacement,113
+27,Replacement,207
+28,Consultation,198
+29,Emergency Repair,148
+30,Upgrade,120
+31,Scheduled Service,140
+32,Inspection,146
+33,Replacement,264
+34,Scheduled Service,290
+35,Emergency Repair,161
+36,Installation,281
+37,Replacement,131
+38,Upgrade,216
+39,Maintenance,141
+40,Repair,293
+41,Replacement,173
+42,Maintenance,128
+43,Emergency Repair,110
+44,Inspection,280
+45,Installation,214
+46,Replacement,289
+47,Upgrade,215
+48,Calibration,275
+49,Emergency Repair,253
+50,Emergency Repair,208
+51,Consultation,270
+52,Calibration,103
+53,Upgrade,134
+54,Emergency Repair,240
+55,Consultation,278
+56,Maintenance,241
+57,Consultation,157
+58,Scheduled Service,173
+59,Emergency Repair,205
+60,Replacement,172
+61,Calibration,120
+62,Repair,248
+63,Inspection,195
+64,Upgrade,299
+65,Maintenance,197
+66,Inspection,268
+67,Maintenance,135
+68,Scheduled Service,117
+69,Repair,173
+70,Consultation,198
+71,Repair,289
+72,Calibration,164
+73,Repair,110
+74,Repair,223
+75,Replacement,200
+76,Replacement,288
+77,Scheduled Service,283
+78,Consultation,235
+79,Calibration,298
+80,Calibration,273
+81,Emergency Repair,143
+82,Emergency Repair,216
+83,Repair,228
+84,Maintenance,102
+85,Maintenance,278
+86,Inspection,111
+87,Maintenance,143
+88,Installation,261
+89,Repair,190
+90,Installation,120
+91,Repair,272
+92,Repair,240
+93,Scheduled Service,192
+94,Maintenance,187
+95,Calibration,175
+96,Consultation,136
+97,Upgrade,296
+98,Calibration,252
+99,Emergency Repair,186
+100,Calibration,107
